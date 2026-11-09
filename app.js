@@ -19,3 +19,12 @@ btn.addEventListener("click", function () {
 //select the container
 //forEach on items to inject to screen
 //select add cart buttons
+
+//use class
+const buttons = document.querySelectorAll("button");
+console.log(buttons);
+buttons.forEach((button) =>
+  button.addEventListener("click", function (event) {
+    console.log(event.target.closest(".card").getAttribute("data-item"));
+  }),
+);
